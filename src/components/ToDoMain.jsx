@@ -28,10 +28,14 @@ const ToDoMain = () => {
         }
     ])
 
+    const addToDo = (item) => {
+        const tempList = [...tasks, {text: item, isCompleted: false}]
+        setTasks(tempList);
+    }
     return (
         <div>
             <TableForTasks todolist={tasks} />
-            <FormForTask/>
+            <FormForTask addToDo={addToDo} />
         </div>
     )
 }
