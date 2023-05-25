@@ -30,7 +30,7 @@ const ToDoMain = () => {
 
     return (
         <div>
-            <TableForTasks/>
+            <TableForTasks todolist={tasks} />
             <FormForTask/>
         </div>
     )
